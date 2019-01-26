@@ -94,26 +94,6 @@ public class RecyclerAdapter extends PinnedHeaderAdapter<RecyclerView.ViewHolder
 
 			}
 
-
-
-
-//		holder.itemView.setOnClickListener(new View.OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//
-//
-//
-//
-//
-//			}
-//		});
-//		if (getItemViewType(position) == VIEW_TYPE_ITEM_TIME) {
-//			TitleHolder titleHolder = (TitleHolder) holder;
-//			//titleHolder.mTextTitle.setText(mDataList.get(position));
-//		} else {
-//			ContentHolder contentHolder = (ContentHolder) holder;
-//			//contentHolder.mTextTitle.setText(mDataList.get(position));
-//		}
 	}
 
 	@Override

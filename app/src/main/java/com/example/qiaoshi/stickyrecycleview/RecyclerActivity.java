@@ -47,7 +47,17 @@ public class RecyclerActivity extends AppCompatActivity implements RecyclerAdapt
         mRecyclerView.setOnPinnedHeaderClickListener(new StickyRecyclerView.OnPinnedHeaderClickListener() {
             @Override
             public void onStickyHeaderClick(int adapterPosition,int type) {
-                Toast.makeText(mContext, "Type"+type+"------- position = " + adapterPosition, LENGTH_SHORT).show();
+                switch (type){
+                    case  0:
+                        Toast.makeText(mContext, "筛选1"+"------- position = " + adapterPosition, LENGTH_SHORT).show();
+                        break;
+                    case  1:
+                        Toast.makeText(mContext, "筛选2"+"------- position = " + adapterPosition, LENGTH_SHORT).show();
+                        break;
+                    case  2:
+                        Toast.makeText(mContext, "筛选3"+"------- position = " + adapterPosition, LENGTH_SHORT).show();
+                        break;
+                }
             }
         });
     }
@@ -76,18 +86,18 @@ public class RecyclerActivity extends AppCompatActivity implements RecyclerAdapt
         switch (id){
             case 0:
 
-                Toast.makeText(mContext, "点击了 position = " + id, LENGTH_SHORT).show();
+                Toast.makeText(mContext, "点击了 item = " + id, LENGTH_SHORT).show();
 
                 break;
             case 1:
 
 
-                Toast.makeText(mContext, "点击了 position = " + id, LENGTH_SHORT).show();
+                Toast.makeText(mContext, "点击了 item = " + id, LENGTH_SHORT).show();
 
                 break;
             case 2:
 
-                Toast.makeText(mContext, "点击了 position = " + id, LENGTH_SHORT).show();
+                Toast.makeText(mContext, "点击了 item = " + id, LENGTH_SHORT).show();
                 break;
         }
     }
