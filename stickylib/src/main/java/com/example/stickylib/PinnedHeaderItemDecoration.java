@@ -12,6 +12,7 @@ public class PinnedHeaderItemDecoration extends RecyclerView.ItemDecoration impl
 
 	private Rect mPinnedHeaderRect     = null;
 	private int  mPinnedHeaderPosition = -1;
+	private int mPinnedWidth = 0;
 
 	/**
 	 * 把要固定的View绘制在上层
@@ -57,6 +58,7 @@ public class PinnedHeaderItemDecoration extends RecyclerView.ItemDecoration impl
 				if (mPinnedHeaderRect == null) {
 					mPinnedHeaderRect = new Rect();
 				}
+				mPinnedWidth = parent.getWidth();
 				mPinnedHeaderRect.set(0, 0, parent.getWidth(), pinnedHeaderView.getMeasuredHeight() + sectionPinOffset);
 			} else {
 				mPinnedHeaderRect = null;
@@ -118,5 +120,10 @@ public class PinnedHeaderItemDecoration extends RecyclerView.ItemDecoration impl
 	@Override
 	public int getPinnedHeaderPosition() {
 		return mPinnedHeaderPosition;
+	}
+
+	@Override
+	public int getType() {
+		return mPinnedWidth;
 	}
 }
